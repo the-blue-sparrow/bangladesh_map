@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Transform.translate(
               offset: offset,
               child: Container(
-                color: Colors.blueGrey,
+                //color: Colors.blueGrey,
                 child: Stack(
                   children: _buildMap(),
                 ),
