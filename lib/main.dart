@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Theme.of(context).platform == TargetPlatform.android ? 56.0 : 44.0;
     double safeZoneHeight = MediaQuery.of(context).padding.bottom;
 
-    double scaleFactor = 0.5;
+    double scaleFactor = 3.5;
 
     double x = (width / 2.0) - (MapSvgData.width / 2.0);
     double y = (height / 2.0) -
@@ -54,9 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Transform.scale(
           scale: ((height / MapSvgData.height)) * scaleFactor,
           child: Transform.translate(
-            offset: offset,
-            child: Stack(children: _buildMap()),
-          ),
+              offset: offset,
+              child: Container(
+                color: Colors.blueGrey,
+                child: Stack(
+                  children: _buildMap(),
+                ),
+              )),
         ),
       ),
     );
